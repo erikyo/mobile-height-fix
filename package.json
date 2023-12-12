@@ -1,0 +1,24 @@
+{
+  "name": "mobile-height-fix",
+  "version": "1.0.0",
+  "description": "A npm module that helps fix the height of the screen for mobile phones by setting a custom property (--vh) on the HTML root element.",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "MobileHeightFix.js",
+    "README.md",
+    "package.json",
+    "LICENSE.md"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "css",
+    "vh",
+    "height",
+    "fix"
+  ],
+  "author": "Erik Golnìinelli <erik@codekraft.it>",
+  "license": "ISC"
+}
