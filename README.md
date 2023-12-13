@@ -2,6 +2,13 @@
 
 A simple module for fixing the height issue in mobile browsers where the address bar is visible, and the content does not fill the full height of the screen.
 
+Is intended to solve this issue automagically 🪄
+
+- https://css-tricks.com/css-fix-for-100vh-in-mobile-webkit/
+- https://css-tricks.com/the-trick-to-viewport-units-on-mobile/
+
+From the latter of these pages I took most of the cue to create this module, so kudos to Louis Hoebregts (@Mamboleoo)  
+
 ## Installation
 
 ```bash
@@ -9,6 +16,17 @@ npm install mobile-height-fix
 ```
 
 ## Usage
+After importing the module
+
+- The body will be set to have a minimum height of 100% of the height of the screen
+
+- A new custom property will be available, `--vh` that represents the 1% of the height of the screen
+  You can use this css variable in this way>  
+
+```css
+    height: calc(var(--vh, 1vh) * 100)
+```
+
 
 ### Importing in HTML (recommended)
 

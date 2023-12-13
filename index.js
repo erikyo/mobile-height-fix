@@ -11,14 +11,25 @@ class MobileHeightFix {
     this.init();
   }
 
+  isCssPropertyValueSupported(prop, val) {
+    var el = document.createElement('div');
+    el.style[prop] = val;
+    return el.style[prop] === val;
+  }
+
   /**
    * Sets the full height of the window.
    *
    * @return {void}
    */
   setFullHeight() {
+    if (this.isCssPropertyValueSupported('height', '100dvh')) {
+      document.documentElement.style.height = `100dvh`;
+      return;
+    }
     const vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
+    document.documentElement.style.height = `calc(var(--vh, 1vh) * 100)`;
   }
 
   /**
